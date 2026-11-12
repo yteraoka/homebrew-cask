@@ -1,8 +1,8 @@
 class Cappy < Formula
   desc "Record meeting audio and mic as separate tracks, then transcribe and summarize"
   homepage "https://github.com/yteraoka/cappy"
-  url "https://github.com/yteraoka/cappy/releases/download/v0.3.0/cappy-0.3.0-macos-arm64.zip"
-  sha256 "122818f9524669893477eb1c0c8221d3114a93e62192a3fd122a7ad18a44c835"
+  url "https://github.com/yteraoka/cappy/releases/download/v0.4.0/cappy-0.4.0-macos-arm64.zip"
+  sha256 "78ddcc5ac3a5fdb020d074e97ff98fc3e0fe0a20422e37c070da0feaa86d1986"
   license "MIT"
 
   depends_on arch: :arm64
@@ -18,7 +18,8 @@ class Cappy < Formula
     <<~EOS
       The first recording asks the terminal app you run cappy from for
       the "System Audio Recording" and "Microphone" permissions.
-      Run `cappy doctor` to check permissions, authentication and settings.
+      Run `cappy init` to create the config file interactively, and
+      `cappy doctor` to check permissions, authentication and settings.
       Set CAPPY_LANG=ja to show messages in Japanese.
     EOS
   end
