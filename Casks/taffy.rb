@@ -1,6 +1,6 @@
 cask "taffy" do
-  version "0.0.1"
-  sha256 "f3182dc7527e906be4343a1b9235b48c8b2bfc9da224d0bc5665323d4f8dab6f"
+  version "0.0.2"
+  sha256 "d5eef4a0cdd0220e8dd8d0173ab16511a2ad1714ed95e6b6c6b84c84794914ef"
 
   url "https://github.com/yteraoka/taffy/releases/download/v#{version}/Taffy-#{version}-macos-universal.zip"
   name "Taffy"
@@ -11,13 +11,15 @@ cask "taffy" do
     skip "Auto-generated on release."
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Taffy.app"
 
   # ad-hoc 署名で公証していないため、quarantine 属性を外して Gatekeeper に止められないようにする
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Taffy.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Taffy.app"],
+        must_succeed: false
   end
 
   uninstall quit: "com.github.yteraoka.taffy"
