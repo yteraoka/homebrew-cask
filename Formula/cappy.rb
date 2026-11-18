@@ -1,8 +1,8 @@
 class Cappy < Formula
   desc "Record meeting audio and mic as separate tracks, then transcribe and summarize"
   homepage "https://github.com/yteraoka/cappy"
-  url "https://github.com/yteraoka/cappy/releases/download/v0.9.2/cappy-0.9.2-macos-arm64.zip"
-  sha256 "a06d66e186c797721ce0c96859f73eb4061917d02096e26529b5a6cc9fed2af7"
+  url "https://github.com/yteraoka/cappy/releases/download/v0.9.3/cappy-0.9.3-macos-arm64.zip"
+  sha256 "9874990cc214053066af649c27290c0826a4be7a2927370c2048daef772e6280"
   license "MIT"
 
   depends_on arch: :arm64
