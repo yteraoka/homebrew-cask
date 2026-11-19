@@ -1,8 +1,8 @@
 class Gcappy < Formula
   desc "Menu bar app for cappy: record meetings, then transcribe and summarize them"
   homepage "https://github.com/yteraoka/cappy"
-  url "https://github.com/yteraoka/cappy/releases/download/v0.11.0/gcappy-0.11.0-macos-arm64.zip"
-  sha256 "ff83fc2369b0a5b0fa832331ee532e0edb6a538c4c51e2e0e6732b479786353d"
+  url "https://github.com/yteraoka/cappy/releases/download/v0.12.0/gcappy-0.12.0-macos-arm64.zip"
+  sha256 "de883ef488fd6beb57beb088d3055401bf7dcab19d4eb561c7d3367a42f62caf"
   license "MIT"
 
   depends_on arch: :arm64
